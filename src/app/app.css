@@ -1,0 +1,12 @@
+h1{
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+}
+
+h2{
+    font-size: small;
+    font-family: cursive;
+    color: crimson;
+    text-decoration: underline;
+}

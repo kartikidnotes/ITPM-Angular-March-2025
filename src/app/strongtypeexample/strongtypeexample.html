@@ -1,0 +1,36 @@
+<p>strongtypeexample works!</p>
+
+<hr>
+<h1>strongly typed- variables and function : Framework Details </h1>
+<h2>{{getFramework()}}</h2>
+
+<hr>
+<h1>strongly typed - Array : Marks Details </h1>
+<h2>{{getTotal()}}</h2>
+
+<hr>
+<h1>strongly typed - Object : Student Details </h1>
+<h2>Student ID : {{student.id}}</h2>
+<h2>Student Name : {{student.sname}}</h2>
+<h2>Student Course : {{student.course}}</h2>
+<h2>Student Marks : {{student.marks}}</h2>
+
+
+<hr>
+<h1>strongly typed- variables and function : Sum </h1>
+<h2>{{add(10,20)}}</h2>
+
+<hr>
+<h1>strongly typed- Boolean</h1>
+<h2 *ngIf="isLoggedIn">User is Logged In </h2>
+<h2 *ngIf="!isLoggedIn">User is Logged OUT </h2>
+
+<hr>
+<h1>Multiple Objects - Strongly type </h1>
+<h2>
+    <ul>
+        <li *ngFor="let s of students">
+            {{s.id}}--- {{s.name}}
+        </li>
+    </ul>
+</h2>

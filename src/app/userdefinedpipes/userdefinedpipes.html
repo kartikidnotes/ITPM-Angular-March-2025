@@ -1,0 +1,35 @@
+<p>userdefinedpipes works!</p>
+<h3>{{'Angular 19 Pipe Example' | reversestr}}</h3>
+<h3>{{'India is my COuntrry!!!' | reversestr}}</h3>
+<hr>
+<h3>{{5 | power:2}}</h3>
+<hr>
+<h3>{{10 | sqaure}}</h3>
+<hr>
+<h3>{{'India is my Country !!!' | shortstr:30}}</h3>
+<hr>
+Enter Character to be search in Array : <input type="text" [(ngModel)]="searchText">
+
+<ul>
+    <li *ngFor="let name of filternames | filter:searchText">{{name}}</li>
+</ul>
+
+<hr>
+<h3>{{'angular react india is my country' | capitalletter}}</h3>
+
+<hr>
+<h3>Age : {{dob | agepipe}}</h3>
+
+<hr>
+<h3>Mobile Number : {{'1234567890' | maskmobilenumber :6}}</h3>
+
+<hr>
+<h3>Mobile Number :{{'1234567890' | countrycode}}</h3>
+
+<hr>
+<h3>User Status Dashboard</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}} - <span [style.color]="user.status | userstatus">{{user.status}}</span>
+    </li>
+</ul>

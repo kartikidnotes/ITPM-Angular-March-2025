@@ -1,0 +1,27 @@
+<!-- Interpolation -->
+<h1>{{hotelName}}</h1>
+
+<!-- Property Binding -->
+<img [src]="roomImage" width="300">
+
+<hr>
+<h3>Select The Room Type</h3>
+<button (click)="changeRoom('Standard')">Standard</button>
+<button (click)="changeRoom('Deluxe')">Deluxe</button>
+<button (click)="changeRoom('Suite')">Suite</button>
+
+<h4>Selected Room is : {{roomType}}</h4>
+<h4>Price Per Night : {{pricePerNight}}</h4>
+
+<hr>
+<h3>Extra Services</h3>
+<input type="checkbox" [(ngModel)]="breakfast">Breakfast(300/night)
+<input type="checkbox" [(ngModel)]="AC">AC(500/night)
+<input type="checkbox" [(ngModel)]="pickup">Pickup(1000)
+
+<hr>
+<h1 [style.color]="calculateTotal()>10000?'red':'green'">Total AMount to be Paid : {{calculateTotal()}}</h1>
+
+<hr>
+
+<button (click)="confirmmBooking()" [disabled]="nights<1" [class.disabled-btn]="nights<1">Confirm Booking</button>

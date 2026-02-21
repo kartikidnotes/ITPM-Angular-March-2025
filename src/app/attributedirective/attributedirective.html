@@ -1,0 +1,20 @@
+<p>Attribute Directive Works!</p>
+
+<div>
+  <!-- ngClass Example -->
+  <p [ngClass]="{'red-text': isRed, 'blue-text': !isRed}">
+    This is my Demo Paragraph!!! Welcome To Attribute Directives!!!
+  </p>
+
+<!-- ngclass== variable
+ngstyle == direct css property  -->
+
+  <!-- ngStyle Example -->
+  <p [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+    This text changes color and font size dynamically!
+  </p>
+
+  <button (click)="isRed = !isRed">Toggle Text Color</button>
+  <button (click)="color = color === 'blue' ? 'green' : 'blue'">Change Color</button>
+  <button (click)="size = size === 20 ? 30 : 20">Change Font Size</button>
+</div>

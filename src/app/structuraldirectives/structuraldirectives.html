@@ -1,0 +1,56 @@
+<p>structuraldirectives works!</p>
+
+<!-- ngif -->
+<h1 *ngIf="showMessage">IT Preneur , Pune!!!!!!!!!</h1>
+
+<!-- ngfor -->
+<ul>
+    <li *ngFor="let i of items">{{i}}</li>
+</ul>
+
+<!-- event -->
+ <h2 *ngIf="message">Toggle Function in Angular !!!</h2>
+ <button (click)="message=!message">Toggle Button</button>
+<br><br>
+<!-- if-else  -->
+<div *ngIf="isLoggedIn ;else loginMessage">
+Welcome Back , USER!!!!!!
+</div>
+
+<ng-template #loginMessage>Please Login In!!!!</ng-template>
+<br><br>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">This color is red!!!</div>
+    <div *ngSwitchCase="'yellow'">This color is yellow!!!</div>
+    <div *ngSwitchCase="'blue'">This color is blue!!!</div>
+    <div *ngSwitchCase="'black'">This color is black!!!</div>
+    <div *ngSwitchDefault="">Unknown Value</div>
+</div>
+<br><br>
+
+<button (click)="login()">Login</button>
+<button (click)="logout()">Logout</button>
+
+<p *ngIf="isLogin">Welcome Back USer!!!!!</p>
+<p *ngIf="!isLogin">Please Login To Continue!!!</p><br><br>
+
+<h3>Product List</h3>
+<!-- <ul>
+    <li *ngFor="let i of products">
+        {{i.name}}---${{i.price}}
+    </li>
+</ul> -->
+
+
+<div *ngIf="products.length>0 ;else NoData">
+<ul>
+    <li *ngFor="let i of products">
+        <!-- {{i.name}} -->
+    </li>
+</ul>
+</div>
+
+<ng-template #NoData> 
+    <h2>No Products Are Available!!!</h2>
+</ng-template>

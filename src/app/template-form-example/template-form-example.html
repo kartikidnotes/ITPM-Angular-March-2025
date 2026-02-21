@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <h2>Employee Registration (Template Form)</h2>
+
+  <form #empForm="ngForm" (ngSubmit)="onSubmit(empForm)">
+
+    <!-- Name -->
+    <div class="mb-3">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control"
+             required minlength="3"
+             [(ngModel)]="employee.name"
+             #name="ngModel">
+
+      <small class="text-danger" *ngIf="name.invalid && name.touched">
+        Name is required (min 3 chars)
+      </small>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" name="email" class="form-control"
+             required email
+             [(ngModel)]="employee.email"
+             #email="ngModel">
+
+      <small class="text-danger" *ngIf="email.invalid && email.touched">
+        Valid email required
+      </small>
+    </div>
+
+    <!-- Department -->
+    <div class="mb-3">
+      <label>Department</label>
+      <select name="department" class="form-control"
+              required
+              [(ngModel)]="employee.department"
+              #department="ngModel">
+
+        <option value="">Select Department</option>
+        <option *ngFor="let dept of departments" [value]="dept">
+          {{dept}}
+        </option>
+      </select>
+
+      <small class="text-danger" *ngIf="department.invalid && department.touched">
+        Department required
+      </small>
+    </div>
+
+    <!-- Salary -->
+    <div class="mb-3">
+      <label>Salary</label>
+      <input type="number" name="salary" class="form-control"
+             required min="10000"
+             [(ngModel)]="employee.salary"
+             #salary="ngModel">
+
+      <small class="text-danger" *ngIf="salary.invalid && salary.touched">
+        Minimum salary 10000
+      </small>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="empForm.invalid">
+      Register
+    </button>
+
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<p>bindingexample works!</p>
+
+<h2>Interpolation Example :{{title}}</h2>
+<hr>
+
+<button [disabled]="isDisabled">Click me To check Property Binding</button>
+
+<hr>
+<h3>{{count}}</h3>
+<button (click)="increment()">Counter App</button>
+
+<hr>
+
+<input type="text" placeholder="Enter Name :" [(ngModel)]="username">
+<h2>Username is : {{username}}</h2>
+<hr>
+
+<h4>Name is : {{name}}</h4>
+<h4>Age is : {{age}}</h4>
+<img [src]="Profile" width="450px" height="250">
+<hr>
+
+<h2>Counter APplication</h2>
+<h4>COunter is : {{counter}}</h4>
+<button (click)="increase_counter()">+</button>
+<button (click)="decrease_counter()">-</button>
+<button (click)="reset()">Reset</button>
+
+<hr>
+
+<h2>Login Form</h2>
+<input type="text" placeholder="Enter USer Id" [(ngModel)]="user">
+<input type="password" placeholder="Enter USer Password" [(ngModel)]="password">
+
+
+<h4>User ID: {{user}} </h4>
+<h4>Password : {{password}}</h4>

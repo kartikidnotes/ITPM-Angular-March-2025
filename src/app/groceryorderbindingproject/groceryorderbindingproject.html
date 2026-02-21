@@ -1,0 +1,37 @@
+<h2>Smart Grocery Order</h2>
+
+<!-- Interpolation -->
+<h3>{{ productName }}</h3>
+<p>Price per item: ₹{{ price }}</p>
+
+<!-- Property Binding -->
+<img [src]="imageURL" width="200">
+
+<hr>
+
+<!-- Event Binding -->
+<button (click)="decreaseQuantity()">-</button>
+<span> {{ quantity }} </span>
+<button (click)="increaseQuantity()">+</button>
+
+<br><br>
+
+<!-- Two-way Binding -->
+<label>
+  <input type="checkbox" [(ngModel)]="discountApplied">
+  Apply ₹50 Discount
+</label>
+
+<hr>
+
+<!-- Style Binding -->
+<p [style.color]="quantity > 0 ? 'green' : 'red'">
+  Total Price: ₹{{ getTotalPrice() }}
+</p>
+
+<!-- Property + Class Binding -->
+<button 
+  [disabled]="quantity === 0"
+  [class.disabled-btn]="quantity === 0">
+  Place Order
+</button>

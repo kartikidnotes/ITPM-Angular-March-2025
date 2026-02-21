@@ -1,0 +1,12 @@
+<p>parentoutputdecorator works!</p>
+
+<app-childoutputdecorator (messageEvent)="getMessage($event)" (countEvent)="updateCounter($event)" (decreaseEvent)="decreaseCounter($event)" (userEvent)="getUser($event)"></app-childoutputdecorator>
+
+<h2>Message From Child Is :{{message}}</h2>
+
+<h2>Count :{{count}}</h2>
+
+<h2>User Details :</h2>
+<p>{{user?.id}}</p>
+<p>{{user?.name}}</p>
+<p>{{user?.role}}</p>

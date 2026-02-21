@@ -1,0 +1,15 @@
+.container {
+  max-width: 900px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+table {
+  font-size: 14px;
+}
+
+button {
+  min-width: 70px;
+}
