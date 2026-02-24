@@ -18,7 +18,7 @@ export interface Employee {
 
 export class EmployeeService {
   
-  private apiUrl = 'api/employees';
+  private apiUrl ='api/employees';
 
   constructor(private http: HttpClient) {}
 
